@@ -15,9 +15,19 @@
  */
 // write your code here
 
+var shoppingCart: [String] = ["Chips", "Salsa", "Guacamole", "Red Wine"]
 
+//let ingredients = ["Chips", "Salsa", "Guacamole", "Red Wine"]
 
-
+//var shoppingCart : [String] = []
+//
+//for ingredient in ingredients{
+//
+//    shoppingCart.append(ingredient)
+//
+//}
+//
+//print(shoppingCart)
 
 
 /*: question2
@@ -25,9 +35,17 @@
  */
 // write your code here
 
+let numbersList :[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-
-
+//let numbersList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//
+//var cart : [Int] = []
+//
+//for number in numbersList{
+//
+//    cart.append(number)
+//}
+//
 
 
 
@@ -36,11 +54,12 @@
  */
 // write your code here
 
+for number in numbersList{
+
+    print(number)
 
 
-
-
-
+}
 
 /*: question4
  ### 4. Take the list of shopping cart items you created in question 1 and print their values in the most efficient way possible. Prefix each item in the array with a string of text.
@@ -49,7 +68,10 @@
 
 
 
+for cartItem in shoppingCart{
 
+    print("This is a \(cartItem)")
+}
 
 
 
@@ -60,6 +82,15 @@
 
 
 
+func printList(cartItem: String){
+
+    print("This is a \(cartItem).")
+}
+
+for cartItem in shoppingCart{
+    printList(cartItem)
+}
+
 
 
 
@@ -69,9 +100,23 @@
  */
 // write your code here
 
+var people = ["Bettina", "Jim", "Eldon", "Michael"]
 
+func greetings(names:[String]){
 
-
+    for name in names {
+        
+        print("Good morning\(name)")
+        
+        if name == "Michael" {
+            print("Top of the morning \(name)!")
+    
+        }
+//        or can do an if/ else with {
+//            print("Good morning\(name)")
+//        }
+    }
+}
 
 
 /*: question7
@@ -79,11 +124,22 @@
  */
 // write your code here
 
+let numbersArray: [Int] = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+func returnNumbersLessThan50(array: [Int]) ->[Int]{
+    var numbersLessThan50: [Int] = []
+    
+    for number in numbersArray{
+    
+        if number <= 50{
+         numbersLessThan50.append(number)
+        }
+    }
+    return numbersLessThan50
+}
 
-
-
-
-
+//var filteredNumbersArray = returnNumbersLessThan50(numbersArray)
+//
+//print(filteredNumbersArray)
 
 //: Check here on the solution branch for a link to the solution file
